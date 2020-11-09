@@ -17,7 +17,8 @@ public class BankService {
     public int deposit(int contribution){
         final int incomePercent = 3;
         int income = 0;
-        if (contribution >= 1000) {
+        int minContribution = 1000;
+        if (contribution >= minContribution) {
             income = contribution * incomePercent / 100;
         }
         return income;
