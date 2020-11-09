@@ -6,8 +6,9 @@ public class BankService {
         int cashback = 0;
         if (cashbackPercent == 1 || cashbackPercent == 5 || cashbackPercent == 30) {
             cashback = purchaseSum * cashbackPercent / 100;
-            if (cashback >= 3000) {
-                cashback = 3000;
+            int limit = 3000;
+            if (cashback >= limit) {
+                cashback = limit;
             }
         }
         return cashback;
